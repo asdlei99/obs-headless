@@ -1,5 +1,6 @@
 #pragma once
 
+#include <vector>
 #include "Source.hpp"
 
 class Scene {
@@ -29,7 +30,7 @@ private:
 	bool started;
 	obs_scene_t* obs_scene;
 	SourceMap sources;
-	Source* active_source;
+	std::vector<Source*> active_sources;
 	Settings* settings;
 	uint64_t source_id_counter;
 };
